@@ -4,7 +4,6 @@ const CodeModel = require('../schemaModels/codeAddSchemaModel');
 
 
 // Get components by category
-// Get components by category
 router.get('/:reqCategory', async(req, res)=>{
     try{
         const result = await CodeModel.find({category: req.params.reqCategory}).sort({id: 1});
